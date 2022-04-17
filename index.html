@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form id="form">
+        <div class="title">Get Started</div>
+        <div>
+          <label for="User Input">User Name :</label>
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <input
+            type="text"
+            placeholder="Jayu hande"
+            id="username"
+            name="username"
+          />
+        </div>
+        <div>
+          <label for="User Email">Email :</label>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="abc@gmail.com"
+          />
+          <div class="error"></div>
+        </div>
+        <div>
+          <label for="user Password">Password :</label>
+          <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password here"
+          />
+          <div class="error"></div>
+        </div>
+        <form>
+          <button id="btn" type="submit">Submit</button>
+        </form>
+      </form>
+    </div>
+  </body>
+</html>
