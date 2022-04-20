@@ -14,7 +14,28 @@
   <body>
     <div class="container">
       <form id="form">
-        <div class="title">Get Started</div>
+        <div class="social">
+          <div class="title">Get Started</div>
+          <div class="question">Already have an account?</div>
+          <div class="btn">
+            <div class="btn-1">
+              <img
+                src="https://img.icons8.com/color/30/000000/google-logo.png"
+              />
+              Sign Up
+            </div>
+            <div class="btn-2">
+              <img
+                src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png"
+              />
+              Sign Up
+            </div>
+          </div>
+          <div class="or">Or</div>
+        </div>
+
+        <!-- //--For UserInput--// -->
+
         <div>
           <label for="User Input">User Name :</label>
           <i class="fa fa-user" aria-hidden="true"></i>
@@ -24,11 +45,17 @@
             id="username"
             name="username"
           />
-          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-          <i class="fa-solid fa-circle-exclamation"></i>
+          <i
+            class="fa fa-exclamation-circle failure-icon"
+            aria-hidden="true"
+          ></i>
+          <i class="far fa-check-circle success-icon"></i>
 
-          <i class="fa-li fa fa-check-circle success-icon"></i>
+          <div class="error"></div>
         </div>
+
+        <!-- /--For Email --/ -->
+
         <div>
           <label for="User Email">Email :</label>
           <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -38,14 +65,19 @@
             id="email"
             placeholder="abc@gmail.com"
           />
-          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-          <i class="fa-li fa fa-check-circle success-icon"></i>
+          <i
+            class="fa fa-exclamation-circle failure-icon"
+            aria-hidden="true"
+          ></i>
+          <i class="far fa-check-circle success-icon"></i>
+
           <div class="error"></div>
         </div>
+
+        <!-- //--For Password--//-- -->
         <div>
           <label for="user Password">Password :</label>
           <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-          <i class="fa-li fa fa-check-circle success-icon"></i>
 
           <input
             type="password"
@@ -53,14 +85,18 @@
             id="password"
             placeholder="password here"
           />
-          <i class="fa-solid fa-circle-exclamation"></i>
-          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-          <i class="fa-solid fa-lock-keyhole"></i>
+          <i
+            class="fa fa-exclamation-circle failure-icon"
+            aria-hidden="true"
+          ></i>
+          <i class="far fa-check-circle success-icon"></i>
+
           <div class="error"></div>
         </div>
-        <form>
-          <button id="btn" type="submit">Submit</button>
-        </form>
+
+        <!-- //Submit Button// -->
+
+        <button id="btn" type="submit">Submit</button>
       </form>
     </div>
     <script src="script.js"></script>

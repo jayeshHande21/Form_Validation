@@ -1,19 +1,31 @@
-let username = document.querySelector("username");
+let id = (id) => document.getElementById(id);
 
-let email = document.querySelector("password");
+let classes = (classes) => document.getElementsByClassName(classes);
 
-let password = document.querySelector("password");
+let username = id("username"),
+  email = id("email"),
+  password = id("password"),
+  form = id("form"),
+  successIcon = classes("success-icon"),
+  failureIcon = classes("failure-icon"),
+  errorMsg = classes("error");
 
-let form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-let errorMsg = document.querySelector(".error");
+  module(username, 0, "Name can not be blank");
+  module(email, 1, "Email can not be blank");
+  module(password, 2, "Password can not be blank");
+});
 
-let successIcon = document.querySelector(".success-icon");
-
-let failureIcon = document.querySelector("failure-icon");
-
-//my name is jayesh hande and a i live in  recently inn pune
-// in sinhagad college of sciece ;
-
-//Jacascriot code is used in eery javascript fraameqperks
-//also to finsd the error message in the form to creat a function to avoid error and in the purpose of arror less devices
+let module = (id, serial, message) => {
+  if (id.value === "") {
+    errorMsg[serial].textContent = message;
+    successIcon[serial].style.opacity = "0";
+    failureIcon[serial].style.opacity = "1";
+  } else {
+    errorMsg[serial].textContent = "";
+    failureIcon[serial].style.opacity = "0";
+    successIcon[serial].style.opacity = "1";
+  }
+};
